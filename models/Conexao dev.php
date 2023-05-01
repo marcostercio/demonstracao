@@ -2,10 +2,10 @@
 
 class Conexao
 {
-    private $host = "motty.db.elephantsql.com";
-    private $dbname = "lhdhzpvu";
-    private $user = "lhdhzpvu";
-    private $password = "ARDSC1q3fKwWQbnYT3AwIfDLaihcw8D_";
+    private $host = "localhost";
+    private $dbname = "demonstracao";
+    private $user = "marcos";
+    private $password = "123456";
     private $conexao;
 
     public function __construct()
