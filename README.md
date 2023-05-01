@@ -42,3 +42,5 @@ Instalando o Composer
  * php composer install
 
  //Este projeto utilizou apenas PHP puro, Jquery, Postgres e bootstrap
+ //login do sistema login: admin senha:admin
+ //conexão em models conexao
