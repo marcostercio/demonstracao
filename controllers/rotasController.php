@@ -11,6 +11,7 @@ if (isset($_GET['page'])) {
 	$page = 'home';
 }
 
+
 switch ($page) {
 
 	case 'home':
