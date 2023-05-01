@@ -23,3 +23,4 @@ class Conexao
         return $this->conexao;
     }
 }
+psql -h motty.db.elephantsql.com  -U lhdhzpvu  -d lhdhzpvu -f demonstracao.sql    
