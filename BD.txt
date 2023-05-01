@@ -1,0 +1,42 @@
+-- Tabela de tipos de produto
+CREATE TABLE tipos (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL
+);
+
+-- Tabela de impostos por tipo de produto
+CREATE TABLE impostos (
+    id SERIAL PRIMARY KEY,
+    tipo_id INTEGER NOT NULL,
+    percentual DECIMAL(4, 2) NOT NULL,
+    FOREIGN KEY (tipo_id) REFERENCES tipos(id)
+);
+
+-- Tabela de produtos
+CREATE TABLE produtos (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL,
+    tipo_id INTEGER NOT NULL,
+    FOREIGN KEY (tipo_id) REFERENCES tipos(id)
+);
+
+-- Tabela de vendas
+CREATE TABLE vendas (
+    id SERIAL PRIMARY KEY,
+    data_venda TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    valor_total DECIMAL(10, 2) NOT NULL,
+    valor_impostos DECIMAL(10, 2) NOT NULL
+);
+
+-- Tabela de itens de venda
+CREATE TABLE itens_venda (
+    id SERIAL PRIMARY KEY,
+    venda_id INTEGER NOT NULL,
+    produto_id INTEGER NOT NULL,
+    quantidade INTEGER NOT NULL,
+    valor_unitario DECIMAL(10, 2) NOT NULL,
+    valor_imposto DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (venda_id) REFERENCES vendas(id),
+    FOREIGN KEY (produto_id) REFERENCES produtos(id)
+);

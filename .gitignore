@@ -1,0 +1,15 @@
+# Arquivos gerados pelo PHP
+*.log
+*.bak
+*.swp
+
+# Arquivos de configuração
+/.env
+/config.php
+
+# Dependências do Composer
+/vendor
+
+# Arquivos de build
+/build
+/dist

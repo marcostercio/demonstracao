@@ -1,4 +1,9 @@
 <?php
+require './controllers/ProdutoController.php';
+require './controllers/ComprasController.php';
+require './controllers/AuthController.php';
+
+
 
 if (isset($_GET['page'])) {
 	$page = $_GET['page'];
@@ -9,7 +14,9 @@ if (isset($_GET['page'])) {
 switch ($page) {
 
 	case 'home':
-		$content = include './views/mostrar_produto.php';
+		$produtoController = new ProdutoController();
+		$content = $produtoController->listarProduto();
+
 		break;
 	case 'contato':
 		$content = include './views/contato.php';
@@ -18,14 +25,25 @@ switch ($page) {
 		$content = '<h1>Sobre nós</h1><p>Este é o conteúdo da página Sobre Nós.</p>';
 		break;
 	case 'cadastrar':
-		$content = include './views/cadastro_produtos.php';
+		$produtoController = new ProdutoController();
+		$content = $produtoController->cadastrarProduto();
 		break;
-	case 'venda':
-		$content = include './views/venda_produtos.php';
+	case 'comprar':
+		$vendaController = new ComprasController();
+		$content = $vendaController;
+		break;
+	case 'compras':
+		$vendaController = new ComprasController();
+		$content = $vendaController->listarCompras();
+	case 'login':
+		$authController = new AuthController();
+		$content = $authController->login();
+		break;
+	case 'logout':
+		$authController = new AuthController();
+		$content = $authController->logout();
 		break;
 	default:
 		$content = '<h1>Página não encontrada</h1><p>A página solicitada não foi encontrada.</p>';
 		break;
 }
-
-echo $content;
