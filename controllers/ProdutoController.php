@@ -1,7 +1,7 @@
 <?Php
 
 
-require_once "models/Produto.php";
+require_once ".//models/Produto.php";
 
 class ProdutoController
 {
