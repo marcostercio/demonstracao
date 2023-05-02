@@ -1,62 +1,51 @@
-<?Php
+<?php
 
-
-require "models/Produto.php";
+require_once "models/Produto.php";
+require_once "models/TipoProduto.php";
 
 class ProdutoController
 {
-    private $nome;
-    private $preco;
-    private $tipo_id;
-
-
     public function __construct()
     {
-
-
-        if (isset($_POST['produtos']) && isset($_POST)) {
-
-
-            $this->nome = $_POST['nome'];
-            $this->preco = $_POST['preco'];
-            $this->tipo_id = $_POST['tipo_id'];
-
+        if (isset($_POST['produtos'])) {
             $produto = new Produto();
-            $produto->setNome($this->nome);
-            $produto->setPreco($this->preco);
-            $produto->setTipo($this->tipo_id);
-
-
+            $produto->setNome($_POST['nome']);
+            $produto->setPreco($_POST['preco']);
+            $produto->setTipo($_POST['tipo_id']);
 
             // salva o produto no banco de dados
             $produto->salvar();
-            // código JavaScript para exibir o alerta
+
+            // exibe mensagem de sucesso
             session_start();
             $_SESSION['mensagem'] = "Produto salvo com sucesso!";
-            
-            header('Location:/');
-        } else if (isset($_REQUEST['tipos']) && isset($_POST)) {
-            $produto = new TipoProduto();
-            $produto->setNome($_POST['tipo']);
-            $produto->setImposto($_POST['imposto']);
+            header('Location: /');
+            exit();
+        } else if (isset($_POST['tipos'])) {
+            $tipo = new TipoProduto();
+            $tipo->setNome($_POST['tipo']);
+            $tipo->setImposto($_POST['imposto']);
 
-            // salva o produto no banco de dados
-            $produto->salvar();
+            // salva o tipo de produto no banco de dados
+            $tipo->salvar();
+
+            // exibe mensagem de sucesso
             session_start();
             $_SESSION['mensagem'] = "Tipo de Produto salvo com sucesso!";
-            header('Location:/');
-        } 
+            header('Location: /');
+            exit();
+        }
     }
-    public function cadastrarProduto(){
-        $instancia = new TipoProduto();
-        $dados = $instancia->listar();
+
+    public function cadastrarProduto()
+    {
+        $tipos = (new TipoProduto())->listar();
         require './views/cadastro_produtos.php';
     }
-    public function listarProduto(){
-        $instanciaProduto = new Produto(); 
-        $produtos = $instanciaProduto->listar();
+
+    public function listarProduto()
+    {
+        $produtos = (new Produto())->listar();
         require './views/mostrar_produtos.php';
-
-
     }
 }
