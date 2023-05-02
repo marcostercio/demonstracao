@@ -128,7 +128,7 @@ if (isset($_SESSION['mensagem'])) {
     </div>
     </div>
 
-    <div id="content" style="min-height:1600px;"><?php include 'controllers/RotasController.php?page=home'?></div>
+    <div id="content" style="min-height:1600px;"><?php include 'controllers/RotasController.php'?></div>
 
 
     <footer class="bg-dark text-light py-3 ">
