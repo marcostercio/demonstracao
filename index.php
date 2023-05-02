@@ -51,7 +51,7 @@ if (isset($_SESSION['mensagem'])) {
 ?>
     <div class="alert alert-secondary">
         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-        <strong>Successo!</strong> <?= $_SESSION['mensagem'] ?>
+        <strong></strong> <?= $_SESSION['mensagem'] ?>
     </div>
 
 
