@@ -15,9 +15,9 @@ if (isset($_GET['page'])) {
 switch ($page) {
 
 	case 'home':
-		//$produtoController = new ProdutoController();	
-		//$content = $produtoController->listarProduto();
-		echo "home";
+		$produtoController = new ProdutoController();
+		$content = $produtoController->listarProduto();
+
 		break;
 	case 'contato':
 		$content = include 'views/contato.php';

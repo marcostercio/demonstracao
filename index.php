@@ -19,20 +19,7 @@
             // Oculta o spinner
             $('.spinner-border').hide(500);
         });
-        $(document).ready(function() {
-
-            // carrega o conteúdo inicial
-            $('#content').load('./controllers/RotasController.php?page=home');
-
-            // navegação com AJAX
-            $('a').click(function(e) {
-                e.preventDefault();
-                var page = $(this).attr('href');
-                $('#content').load('./controllers/RotasController.php?page=' + page);
-            });
-
-
-        });
+       
 
         $(document).ready(function() {
             $('#mostrardiv').click(function() {
