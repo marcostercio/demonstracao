@@ -19,7 +19,20 @@
             // Oculta o spinner
             $('.spinner-border').hide(500);
         });
-       
+        // $(document).ready(function() {
+
+        //     // carrega o conteúdo inicial
+        //     $('#content').load('controllers/RotasController.php?page=home');
+
+        //     // navegação com AJAX
+        //     $('a').click(function(e) {
+        //         e.preventDefault();
+        //         var page = $(this).attr('href');
+        //         $('#content').load('controllers/RotasController.php?page=' + page);
+        //     });
+
+
+        // });
 
         $(document).ready(function() {
             $('#mostrardiv').click(function() {
@@ -115,7 +128,7 @@ if (isset($_SESSION['mensagem'])) {
     </div>
     </div>
 
-    <div id="content" style="min-height:1600px;"></div>
+    <div id="content" style="min-height:1600px;"><?php include 'controllers/RotasController.php?page=home'?></div>
 
 
     <footer class="bg-dark text-light py-3 ">
