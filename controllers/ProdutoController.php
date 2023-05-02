@@ -14,7 +14,7 @@ class ProdutoController
     {
 
 
-        if (isset($_POST['comprar']) && isset($_POST)) {
+        if (isset($_POST['produtos']) && isset($_POST)) {
 
 
             $this->nome = $_POST['nome'];
