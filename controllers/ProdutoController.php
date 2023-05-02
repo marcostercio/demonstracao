@@ -1,6 +1,6 @@
 <?php
 
-require_once "models/produto.php";
+require_once "models/Produto.php";
 require_once "models/TipoProduto.php";
 
 class ProdutoController

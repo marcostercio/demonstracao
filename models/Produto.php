@@ -1,6 +1,5 @@
 <?php
 
-require_once "conexao.php";
 
 class Produto {
     private $id;
