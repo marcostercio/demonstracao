@@ -1,7 +1,7 @@
 <?php
-require 'controllers/ProdutoController.php';
-require 'controllers/ComprasController.php';
-require 'controllers/AuthController.php';
+require 'ProdutoController.php';
+require 'ComprasController.php';
+require 'AuthController.php';
 
 
 
@@ -36,6 +36,7 @@ switch ($page) {
 	case 'compras':
 		$vendaController = new ComprasController();
 		$content = $vendaController->listarCompras();
+		break;
 	case 'login':
 		$authController = new AuthController();
 		$content = $authController->login();
