@@ -128,7 +128,7 @@ if (isset($_SESSION['mensagem'])) {
     </div>
     </div>
 
-    <div id="content" style="min-height:1600px;"></div>
+    <div id="content" style="min-height:1600px;"><?php echo "ssd" ?></div>
 
 
     <footer class="bg-dark text-light py-3 ">
