@@ -128,7 +128,8 @@ if (isset($_SESSION['mensagem'])) {
     </div>
     </div>
 
-    <div id="content" style="min-height:1600px;"><?php include 'controllers/RotasController.php'?></div>
+    <div id="content" style="min-height:1600px;"><?php include 'controllers/ProdutoController.php';  $produtoController=new ProdutoController();
+		$content = $produtoController->listarProduto();?></div>
 
 
     <footer class="bg-dark text-light py-3 ">
