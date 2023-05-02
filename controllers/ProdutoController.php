@@ -1,7 +1,7 @@
 <?Php
 
 
-require "/app/models/Produto.php";
+require "models/Produto.php";
 
 class ProdutoController
 {
