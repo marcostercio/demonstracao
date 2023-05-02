@@ -39,7 +39,7 @@ Instalando o Composer
  Iniciar o php com : php -S localhost:8080
 
  Intalar as dependências com 
- * php composer install
+ * php composer.phar install se n tiver composer instalado se tiver use composer install
 
  //Este projeto utilizou apenas PHP puro, Jquery, Postgres e bootstrap
  //login do sistema login: admin senha:admin
