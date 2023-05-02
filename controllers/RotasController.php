@@ -1,7 +1,7 @@
 <?php
-require './controllers/ProdutoController.php';
+require 'controllers/ProdutoController.php';
 require 'controllers/ComprasController.php';
-require './controllers/AuthController.php';
+require 'controllers/AuthController.php';
 
 
 
