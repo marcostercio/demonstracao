@@ -7,7 +7,7 @@
     <title>Sistema de demonstração</title>
     <link rel="stylesheet" href="public/assets/bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
     <link href="public/assets/estilo.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="public/assets/jquery-3.6.4.min.js"></script>
 
     <script>
         $(document).ajaxStart(function() {
