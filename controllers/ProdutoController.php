@@ -1,6 +1,6 @@
 <?php
 
-require_once "models/Produto.php";
+require_once "models/produto.php";
 require_once "models/TipoProduto.php";
 
 class ProdutoController
@@ -11,7 +11,7 @@ class ProdutoController
             $produto = new Produto();
             $produto->setNome($_POST['nome']);
             $produto->setPreco($_POST['preco']);
-            $produto->setTipo($_POST['tipo_id']);
+            $produto->setTipoId($_POST['tipo_id']);
 
             // salva o produto no banco de dados
             $produto->salvar();
