@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de demonstração</title>
-    <link rel="stylesheet" href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/assets/bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
     <link href="public/assets/estilo.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -142,7 +142,7 @@ if (isset($_SESSION['mensagem'])) {
     </footer>
 
 
-    <script src="vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="public/assets/bootstrap-5.3.0-alpha3-dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
