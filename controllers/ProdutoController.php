@@ -1,7 +1,7 @@
 <?php
 
-require_once "models/Produto.php";
-require_once "models/TipoProduto.php";
+require_once "../models/Produto.php";
+require_once "../models/TipoProduto.php";
 
 class ProdutoController
 {
@@ -40,12 +40,12 @@ class ProdutoController
     public function cadastrarProduto()
     {
         $tipos = (new TipoProduto())->listar();
-        require './views/cadastro_produtos.php';
+        require '../views/cadastro_produtos.php';
     }
 
     public function listarProduto()
     {
         $produtos = (new Produto())->listar();
-        require './views/mostrar_produtos.php';
+        require '../views/mostrar_produtos.php';
     }
 }

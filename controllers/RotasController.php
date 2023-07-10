@@ -20,7 +20,7 @@ switch ($page) {
 
 		break;
 	case 'contato':
-		$content = include 'views/contato.php';
+		$content = include '../views/contato.php';
 		break;
 	case 'about':
 		$content = '<h1>Sobre nós</h1><p>Este é o conteúdo da página Sobre Nós.</p>';
@@ -36,6 +36,7 @@ switch ($page) {
 	case 'compras':
 		$vendaController = new ComprasController();
 		$content = $vendaController->listarCompras();
+		break;
 	case 'login':
 		$authController = new AuthController();
 		$content = $authController->login();

@@ -5,7 +5,7 @@
 //    header('location:/');
 //}
 
-require "./models/Compras.php";
+require "../models/Compras.php";
 
 class ComprasController
 {
@@ -43,7 +43,7 @@ class ComprasController
             header("location:/");
             header("Refresh: 5");
         } else {
-            require './views/compras_produtos.php';
+            require '../views/compras_produtos.php';
         }
     }
 }

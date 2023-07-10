@@ -23,6 +23,7 @@
 
             // carrega o conteúdo inicial
             $('#content').load('controllers/RotasController.php?page=home');
+            
 
             // navegação com AJAX
             $('a').click(function(e) {
