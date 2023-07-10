@@ -23,7 +23,7 @@
 
             // carrega o conteúdo inicial
             $('#content').load('controllers/RotasController.php?page=home');
-            
+
 
             // navegação com AJAX
             $('a').click(function(e) {
@@ -44,7 +44,10 @@
         });
     </script>
 </head>
-
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+?>
 
 <?php
 session_start();
